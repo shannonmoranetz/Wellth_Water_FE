@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { USERS } from '../mock-users';
 
 @Component({
   selector: 'app-userpane',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./userpane.component.scss']
 })
 export class UserpaneComponent implements OnInit {
-
+  users = USERS;
+  
   constructor() { }
 
   ngOnInit() {
