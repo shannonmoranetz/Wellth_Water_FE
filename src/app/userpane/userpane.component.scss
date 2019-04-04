@@ -1,0 +1,26 @@
+.container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid tomato;
+}
+
+.user-greeting {
+
+}
+
+.log-button {
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+.progress-text {
+
+}
+
+.progress-bar {
+  border: 1px solid black;
+  height: 40px;
+  width: 200px;
+}
