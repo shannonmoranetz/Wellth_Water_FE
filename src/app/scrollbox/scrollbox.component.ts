@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Entry } from '../Entry';
+import { ENTRIES } from '../mock-entries';
 
 @Component({
   selector: 'app-scrollbox',
@@ -6,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scrollbox.component.scss']
 })
 export class ScrollboxComponent implements OnInit {
+  entries = ENTRIES;
+
+  entry: Entry = {
+    drink: 'coffee',
+    price: 350
+  };
 
   constructor() { }
 
