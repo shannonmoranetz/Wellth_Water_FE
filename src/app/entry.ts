@@ -1,5 +1,6 @@
 export class Entry {
-  drink: string;
-  price: number;
-  timestamp: string;
+  user_id: number;
+  type: string;
+  amount: number;
+  created_at: string;
 }
