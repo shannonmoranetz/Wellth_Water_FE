@@ -1,5 +1,5 @@
 import { User } from './user';
 
 export const USERS: User[] = [
-  { name: 'Peyton' }
+  { id: 1, name: 'Peyton', email: 'peyton@gmail.com' }
 ];
