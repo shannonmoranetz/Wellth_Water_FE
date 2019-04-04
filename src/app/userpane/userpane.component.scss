@@ -1,8 +1,20 @@
-.container-left {
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.userpane {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 2px solid tomato;
+  height: 90vh;
+  width: 40vw;
+}
+
+.app-title {
+
 }
 
 .user-greeting {
