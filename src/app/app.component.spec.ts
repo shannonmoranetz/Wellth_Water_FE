@@ -1,11 +1,17 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { UserpaneComponent } from './userpane/userpane.component';
+import { LogpaneComponent } from './logpane/logpane.component';
+import { ScrollboxComponent } from './scrollbox/scrollbox.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        UserpaneComponent,
+        LogpaneComponent,
+        ScrollboxComponent
       ],
     }).compileComponents();
   }));
@@ -16,16 +22,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'xpoll'`, () => {
+  it(`should have as title 'Wellth Water'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('xpoll');
+    expect(app.title).toEqual('Wellth Water');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to xpoll!');
+    expect(compiled.querySelector('h1').textContent).toContain('Wellth Water');
   });
 });
