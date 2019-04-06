@@ -1,5 +1,4 @@
-export class Entry {
-  user_id: number;
+export interface IEntry {
   type: string;
   amount: number;
   created_at: string;
