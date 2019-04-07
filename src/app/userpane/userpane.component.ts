@@ -14,7 +14,6 @@ export class UserpaneComponent implements OnInit {
   ngOnInit() {
     this._entryService.getUserEntries().subscribe(
       (response)=>{
-        console.log(response)
         this.userName = response.name;
     });
   }

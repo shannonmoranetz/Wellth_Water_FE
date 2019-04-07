@@ -8,14 +8,14 @@ import { sumTotal } from '../sumtotal';
   styleUrls: ['./scrollbox.component.scss']
 })
 export class ScrollboxComponent implements OnInit {
-  public userEntries: {};
+  public userEntries: [];
   public userTotal = 0;
   public USD;
 
   constructor(private _entryService: EntryService) { }
 
   ngOnInit() {
-    this._entryService.getEntries().subscribe(
+    this._entryService.getUserEntries().subscribe(
       (response)=>{
         this.userEntries = response.entries;
         this.userTotal = sumTotal(response.entries);
