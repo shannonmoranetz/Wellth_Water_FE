@@ -1,23 +1,26 @@
 dist: trusty
 sudo: false
-
 language: node_js
 node_js:
-  - '8'
-
+- '8'
 addons:
   apt:
     sources:
-      - google-chrome
+    - google-chrome
     packages:
-      - google-chrome-stable
-
+    - google-chrome-stable
 cache:
   directories:
-    - ./node_modules
-
+  - "./node_modules"
 install:
-  - npm install
-
+- npm install
 script:
-  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+- npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+notifications:
+  email: false
+deploy:
+  provider: heroku
+  app: wellthwater
+  skip_cleanup: true
+  api_key:
+    secure: dbc0Ifr/lIeRH7e2KPPlL8A7PhOv1Czw/Qviam4BkvvqVBm02jANEv7qgDKKmqNwYwMzmknYH7TmFIS/T86kYgHGDFGK6SOdRjp8VfUHnc7LbEYvVCI12uvLO3pkuuV/mH0T4OQ6TBl/c0dr2/NA3BV3p1LjLaj1BCtIHFnOhvzUp6dk7a892JQu6JEO8PPuiX3fGz0RHClQpP7ntJyEDRvsrC0dJjr2/MWVWKfmkx1pbONYj0kS6YICDAFy7hL115oYcVYYrJhXuyz57jJkn6IA0JfB9rSbzP26pg9SIbPyeOnDf+HCajjxytPg3nT3KRhFH8+8R6CX1kPjZhsWgVoyouVCxfI8SiWkO2jQTeqRng+HHalTWsSuap6aNZ1mkWYTLJu37K3bucRoN0nzMHLEYg2NlxSdGczXCCwyOIYTnHAJIk8WTDdJdPDjhD72ziiJN7NJ2s8KvUuC8SB4691W3jKvQykcp3G7vRy3jnaK0j8lMoBMUXntbBkur3+cLRkMIoBOsSCa2IJ7w6zywI/b5Wx/5z9ktvZH4XAjTTcNP9pEPrVXt7kYgHfXMA8n7m26zxXldIL669BMYlcyJrdTo5Dx++b32tYvz5rHIwI1rdaDKnt1jK3uIVAy2RovrpPRmQ8bcPfSwSnD736ZLtJn1w+d62ww6qLW1X6icEg=

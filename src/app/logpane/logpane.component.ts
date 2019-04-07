@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { sumTotal } from '../sumtotal';
+// import { sumTotal } from '../sumtotal';
 
 @Component({
   selector: 'app-logpane',
@@ -12,7 +12,7 @@ export class LogpaneComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.userTotal = sumTotal();
+    // this.userTotal = sumTotal();
   }
 
 }
