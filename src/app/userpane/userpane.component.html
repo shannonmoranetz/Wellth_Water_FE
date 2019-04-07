@@ -3,12 +3,15 @@
     <h1 class='app-title'>Wellth Water</h1>
     <h2 class='user-greeting'>Hello, {{userName}}</h2>
   </div>
-  <div class='log-button'>
+  <div class='log-button' (click)='toggleShowForm()'>
     <p class='log-button-text'>
       Log
       <br/>
       Drink
     </p>
+  </div>
+  <div class='entry-form' *ngIf='show'>
+    <p>toggled</p>
   </div>
   <div class='progress-box'>
     <h3 class='progress-text'>Progress to next well:</h3>

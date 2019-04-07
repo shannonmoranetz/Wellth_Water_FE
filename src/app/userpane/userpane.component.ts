@@ -8,6 +8,7 @@ import { EntryService } from '../entry.service';
 })
 export class UserpaneComponent implements OnInit {
   public userName: any;
+  public show = false;
 
   constructor(private _entryService: EntryService) { }
 
@@ -16,6 +17,10 @@ export class UserpaneComponent implements OnInit {
       (response)=>{
         this.userName = response.name;
     });
+  }
+
+  toggleShowForm() {
+    this.show = !this.show;
   }
 
 }
