@@ -1,5 +1,9 @@
 <section class='entries-scrollbox'>
   <ul class='entries-list'>
+    <div class='total-foot'>
+      <p class='total-text'>{{userTotal * .01 | currency: USD}}</p>
+      <p class='total-heading'>Total Saved</p>
+    </div>
     <li *ngFor="let entry of userEntries" class='entry'>
       <div class='drink-box'>
         <p class='entry-maintext'>Ɏ</p>
