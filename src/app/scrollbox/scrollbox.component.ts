@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EntryService } from '../entry.service';
-// import { ENTRIES } from '../mock-entries';
 
 @Component({
   selector: 'app-scrollbox',
@@ -8,13 +7,15 @@ import { EntryService } from '../entry.service';
   styleUrls: ['./scrollbox.component.scss']
 })
 export class ScrollboxComponent implements OnInit {
-  public entries = [];
+  userEntries: {};
 
   constructor(private _entryService: EntryService) { }
 
   ngOnInit() {
-    this._entryService.getEntries()
-      .subscribe(data => this.entries = data);
+    this._entryService.getEntries().subscribe(
+      (response)=>{
+        this.userEntries = response.entries;
+    });
   }
 
 }
