@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { USERS } from '../mock-users';
+import { EntryService } from '../entry.service';
 
 @Component({
   selector: 'app-userpane',
@@ -7,11 +7,16 @@ import { USERS } from '../mock-users';
   styleUrls: ['./userpane.component.scss']
 })
 export class UserpaneComponent implements OnInit {
-  users = USERS;
-  
-  constructor() { }
+  public userName: any;
+
+  constructor(private _entryService: EntryService) { }
 
   ngOnInit() {
+    this._entryService.getUserEntries().subscribe(
+      (response)=>{
+        console.log(response)
+        this.userName = response.name;
+    });
   }
 
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IEntry } from './entry';
+import { IUserEntry } from './userEntry';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable({
@@ -14,6 +15,10 @@ export class EntryService {
 
   getEntries(): Observable<IEntry[]>{
     return this.http.get<IEntry[]>(this._url)
+  }
+
+  getUserEntries(): Observable<IUserEntry>{
+    return this.http.get<IUserEntry>(this._url)
   }
 
 }
