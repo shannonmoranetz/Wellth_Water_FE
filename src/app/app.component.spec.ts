@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { UserpaneComponent } from './userpane/userpane.component';
 import { LogpaneComponent } from './logpane/logpane.component';
 import { ScrollboxComponent } from './scrollbox/scrollbox.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -13,6 +14,7 @@ describe('AppComponent', () => {
         LogpaneComponent,
         ScrollboxComponent
       ],
+      imports: [ HttpClientTestingModule ]
     }).compileComponents();
   }));
 
@@ -20,18 +22,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'Wellth Water'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Wellth Water');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Wellth Water');
   });
 });

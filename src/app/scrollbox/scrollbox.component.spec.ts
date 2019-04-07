@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ScrollboxComponent } from './scrollbox.component';
 
 describe('ScrollboxComponent', () => {
@@ -8,7 +8,8 @@ describe('ScrollboxComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ScrollboxComponent ]
+      declarations: [ ScrollboxComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
   }));

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class EntryService {
 
-  private _url: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/entries/'
+  private _url: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/users/1/entries'
 
   constructor(private http: HttpClient) { }
 
