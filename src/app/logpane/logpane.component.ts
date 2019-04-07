@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./logpane.component.scss']
 })
 export class LogpaneComponent implements OnInit {
-  userTotal = 0;
+  public userTotal = 0;
+  public USD;
 
   constructor() { }
 
