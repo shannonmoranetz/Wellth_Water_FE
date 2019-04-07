@@ -7,7 +7,7 @@
     <li *ngFor="let entry of userEntries" class='entry'>
       <div class='drink-box'>
         <p class='entry-maintext'>Ɏ</p>
-        <p class='entry-maintext'>{{entry.type | titlecase}}</p>
+        <p class='entry-maintext'>{{entry.drinktype | titlecase}}</p>
         <p class='entry-maintext'>{{entry.amount * .01 | currency: USD}}</p>
       </div>
       <div class='time-box'>

@@ -11,7 +11,24 @@
     </p>
   </div>
   <div class='entry-form' *ngIf='show'>
-    <p>toggled</p>
+    <p class='entry-form-title'>Add a new drink entry:</p>
+
+
+    <form>
+      <label for='drink-type'>Drink Type</label>
+      <select id="drink-dd" name="drink-type">
+        <option value="coffee">Coffee</option>
+        <option value="tea">Tea</option>
+        <option value="wine">Wine</option>
+        <option value="mixed drinks">Mixed Drinks</option>
+        <option value="beer">Beer</option>
+      </select>
+      <label for='drink-price'>Price</label>
+      <input (keyup)='onNameKeyUp($event)' type="number" id="price" name="drink-price">
+      <button type='button' (click)='submitEntryForm()'>post</button>
+    </form>
+
+
   </div>
   <div class='progress-box'>
     <h3 class='progress-text'>Progress to next well:</h3>

@@ -9,6 +9,7 @@ import { EntryService } from '../entry.service';
 export class UserpaneComponent implements OnInit {
   public userName: any;
   public show = false;
+  public price: number;
 
   constructor(private _entryService: EntryService) { }
 
@@ -22,5 +23,19 @@ export class UserpaneComponent implements OnInit {
   toggleShowForm() {
     this.show = !this.show;
   }
+
+  onNameKeyUp(event:any){
+    this.price = event.target.value;
+  }
+
+  submitEntryForm(){
+    console.log('fire')
+    this._entryService.postEntry().subscribe(
+      (data:any)=>{
+        console.log(data)
+    });
+  }
+
+
 
 }
