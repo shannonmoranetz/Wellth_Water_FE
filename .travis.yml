@@ -13,7 +13,7 @@ cache:
   directories:
   - "./node_modules"
 install:
-- npm install
+- npm install -f
 script:
 - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
 notifications:
