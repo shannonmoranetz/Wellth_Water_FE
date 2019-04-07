@@ -7,7 +7,7 @@ import { EntryService } from '../entry.service';
   styleUrls: ['./scrollbox.component.scss']
 })
 export class ScrollboxComponent implements OnInit {
-  userEntries: {};
+  public userEntries: {};
 
   constructor(private _entryService: EntryService) { }
 
