@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EntryService } from '../entry.service';
+import { sumTotal } from '../sumtotal';
 
 @Component({
   selector: 'app-userpane',
@@ -12,6 +13,8 @@ export class UserpaneComponent implements OnInit {
   public show = false;
   public price: number;
   public drinktype: string;
+  public allEntriesTotal: any;
+  public USD;
 
   constructor(private _entryService: EntryService) { }
 
@@ -20,6 +23,10 @@ export class UserpaneComponent implements OnInit {
       (response)=>{
         this.userName = response.name;
         this.userId = response.id;
+    })
+    this._entryService.getAllEntries().subscribe(
+      (response)=>{
+        this.allEntriesTotal = sumTotal(response);
     });
   }
 

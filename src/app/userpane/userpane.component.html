@@ -12,7 +12,6 @@
   </div>
   <div class='entry-form-section' *ngIf='show'>
     <p class='entry-form-title'>Add a new drink entry:</p>
-
     <form class='entry-form'>
       <label class='entry-form-label' for='drink-type'>Drink Type</label>
       <select [(ngModel)]="drinktype" id="drink-dd" name="drink-type">
@@ -31,8 +30,10 @@
         <button class='entry-form-button' type='button' (click)='toggleShowForm()'>Back</button>
       </div>
     </form>
-
   </div>
+
+  <p>{{allEntriesTotal*.01 | currency: USD}}</p>
+
   <div class='progress-box'>
     <h3 class='progress-text'>Progress to next well:</h3>
     <div class='progress-bar'></div>
