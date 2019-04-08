@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { UserpaneComponent } from './userpane/userpane.component';
 import { LogpaneComponent } from './logpane/logpane.component';
 import { ScrollboxComponent } from './scrollbox/scrollbox.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ScrollboxComponent } from './scrollbox/scrollbox.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

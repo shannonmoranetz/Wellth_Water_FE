@@ -4,6 +4,7 @@ import { UserpaneComponent } from './userpane/userpane.component';
 import { LogpaneComponent } from './logpane/logpane.component';
 import { ScrollboxComponent } from './scrollbox/scrollbox.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -14,7 +15,7 @@ describe('AppComponent', () => {
         LogpaneComponent,
         ScrollboxComponent
       ],
-      imports: [ HttpClientTestingModule ]
+      imports: [ HttpClientTestingModule, FormsModule ]
     }).compileComponents();
   }));
 

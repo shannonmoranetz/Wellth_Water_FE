@@ -1,14 +1,32 @@
 <div class='userpane'>
   <div class='welcome-box'>
     <h1 class='app-title'>Wellth Water</h1>
-    <h2 class='user-greeting'>Hello, {{users[0].name}}</h2>
+    <h2 class='user-greeting'>Hello, {{userName}}</h2>
   </div>
-  <div class='log-button'>
+  <div class='log-button' (click)='toggleShowForm()'>
     <p class='log-button-text'>
       Log
       <br/>
       Drink
     </p>
+  </div>
+  <div class='entry-form-section' *ngIf='show'>
+    <p class='entry-form-title'>Add a new drink entry:</p>
+
+    <form class='entry-form'>
+      <label for='drink-type'>Drink Type</label>
+      <select [(ngModel)]="drinktype" id="drink-dd" name="drink-type">
+        <option value="coffee">Coffee</option>
+        <option value="tea">Tea</option>
+        <option value="wine">Wine</option>
+        <option value="mixed drinks">Mixed Drinks</option>
+        <option value="beer">Beer</option>
+      </select>
+      <label for='drink-price'>Price</label>
+      <input [(ngModel)]='price' type="number" id="price" name="drink-price">
+      <button type='button' (click)='submitEntryForm()'>post</button>
+    </form>
+
   </div>
   <div class='progress-box'>
     <h3 class='progress-text'>Progress to next well:</h3>

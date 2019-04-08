@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { IUserEntry } from './userEntry';
 import { IEntry } from './entry';
 import { Observable } from 'rxjs/Observable';
 
@@ -8,12 +9,17 @@ import { Observable } from 'rxjs/Observable';
 })
 export class EntryService {
 
-  private _url: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/users/1/entries'
+  private _url: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/users/8/entries'
 
   constructor(private http: HttpClient) { }
 
-  getEntries(): Observable<IEntry[]>{
-    return this.http.get<IEntry[]>(this._url)
+  getUserEntries(): Observable<IUserEntry>{
+    return this.http.get<IUserEntry>(this._url)
+  }
+
+  postEntry(userid:number, drinktype:string, price:number): Observable<IEntry> {
+    let _entryUrl = `https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/entries/${userid}/${drinktype}/${price}/`
+    return this.http.post<IEntry>(_entryUrl, {})
   }
 
 }
