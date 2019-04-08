@@ -72,6 +72,31 @@ h1, h2, h3, p {
   justify-content: space-around;
 }
 
+.donate-form-section {
+  background-color: white;
+  border: 1px solid black;
+  height: 200px;
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.donate-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  background-color: #A8FFE0;
+  margin: -60px auto;
+}
+
 .button-hflex {
   display: flex;
   justify-content: space-between;
@@ -81,7 +106,8 @@ h1, h2, h3, p {
   margin-bottom: 10px;
 }
 
-.entry-form-button {
+.entry-form-button,
+.donate-form-button {
   margin: 0px 20px;
 }
 

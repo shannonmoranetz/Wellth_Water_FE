@@ -11,6 +11,7 @@ export class UserpaneComponent implements OnInit {
   public userName: any;
   public userId: number;
   public show = false;
+  public showDonate = false;
   public price: number;
   public drinktype: string;
   public allEntriesTotal: any;
@@ -33,7 +34,15 @@ export class UserpaneComponent implements OnInit {
   }
 
   toggleShowForm() {
+    this.showDonate = false;
     this.show = !this.show;
+  }
+
+  toggleDonateForm() {
+    if(this.show) {
+      this.show = false;
+    }
+    this.showDonate = !this.showDonate;
   }
 
   submitEntryForm(){

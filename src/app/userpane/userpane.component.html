@@ -10,6 +10,17 @@
       Drink
     </p>
   </div>
+
+
+  <div class='donate-button' (click)='toggleDonateForm()' *ngIf='!showDonate'>
+    <p class='donate-button-text'>Donate!</p>
+  </div>
+
+  <div class='donate-form-section' *ngIf='showDonate'>
+    <button class='donate-form-button' type='button' (click)='toggleDonateForm()'>Back</button>
+  </div>
+
+
   <div class='entry-form-section' *ngIf='show'>
     <p class='entry-form-title'>Add a new drink entry:</p>
     <form class='entry-form'>
