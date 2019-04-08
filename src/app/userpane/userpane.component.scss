@@ -15,12 +15,10 @@ h1, h2, h3, p {
   height: 90vh;
   width: 40vw;
   text-align: center;
-  background-color: #FFF2D6;
 }
 
 .welcome-box {
   border: 1px solid black;
-  background-color: #E5F1FF;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -29,10 +27,12 @@ h1, h2, h3, p {
 
 .app-title {
   font-size: 62px;
+  color: #62B6CB;
 }
 
 .user-greeting {
   font-style: italic;
+  color: white;
 }
 
 .log-button {
@@ -44,7 +44,8 @@ h1, h2, h3, p {
   height: 200px;
   width: 200px;
   text-align: center;
-  background-color: #A8FFE0;
+  background-color: white;
+  color: black;
 }
 
 .log-button-text {
@@ -95,8 +96,9 @@ h1, h2, h3, p {
   height: 50px;
   width: 200px;
   text-align: center;
-  background-color: #A8FFE0;
+  background-color: white;
   margin: -60px auto;
+  color: black;
 }
 
 .button-hflex {
@@ -111,15 +113,16 @@ h1, h2, h3, p {
 .entry-form-button,
 .donate-form-button {
   margin: 0px 20px;
+  color: black;
 }
 
 .progress-box {
   border: 1px solid black;
-  background-color: #E5F1FF;
   height: 100px;
 }
 
 .progress-text {
+  color: white;
 }
 
 .progress-bar {
@@ -133,6 +136,10 @@ h1, h2, h3, p {
     height: 5px;
     background-color: #333;
     height: 40px;
+}
+
+.total-out-text {
+  color: white;
 }
 
 .log-button, .progress-bar {
