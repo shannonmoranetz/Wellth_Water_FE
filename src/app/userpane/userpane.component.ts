@@ -12,6 +12,7 @@ export class UserpaneComponent implements OnInit {
   public userId: number;
   public show = false;
   public showDonate = false;
+  public showDonatePrompt = false;
   public price: number;
   public drinktype: string;
   public allEntriesTotal: any;
@@ -30,6 +31,10 @@ export class UserpaneComponent implements OnInit {
       (response)=>{
         this.allEntriesTotal = sumTotal(response);
         this.barWidth = Math.floor((this.allEntriesTotal / 3000));
+        if(this.allEntriesTotal > 3000) {
+          this.showDonate = true;
+          this.showDonatePrompt = true;
+        }
     });
   }
 
@@ -49,5 +54,4 @@ export class UserpaneComponent implements OnInit {
     this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe();
     this.toggleShowForm();
   }
-
 }

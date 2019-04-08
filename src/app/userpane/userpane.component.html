@@ -10,17 +10,12 @@
       Drink
     </p>
   </div>
-
-
   <div class='donate-button' (click)='toggleDonateForm()' *ngIf='!showDonate'>
     <p class='donate-button-text'>Donate!</p>
   </div>
-
   <div class='donate-form-section' *ngIf='showDonate'>
     <button class='donate-form-button' type='button' (click)='toggleDonateForm()'>Back</button>
   </div>
-
-
   <div class='entry-form-section' *ngIf='show'>
     <p class='entry-form-title'>Add a new drink entry:</p>
     <form class='entry-form'>
@@ -43,7 +38,10 @@
     </form>
   </div>
   <div class='progress-box'>
-    <h3 class='progress-text'>Progress to next well:</h3>
+    <div class='prompt-section' *ngIf='showDonatePrompt'>
+      <h3 class='donate-prompt-text'>Goal Reached -- Time to donate!</h3>
+    </div>
+    <h3 class='progress-text' *ngIf='!showDonatePrompt'>Progress to next well:</h3>
     <div class='progress-bar'>
       <div class='inner-bar' [style.width.%]='barWidth'></div>
     </div>
