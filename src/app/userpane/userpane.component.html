@@ -10,13 +10,12 @@
       Drink
     </p>
   </div>
-  <div class='entry-form' *ngIf='show'>
+  <div class='entry-form-section' *ngIf='show'>
     <p class='entry-form-title'>Add a new drink entry:</p>
 
-
-    <form>
+    <form class='entry-form'>
       <label for='drink-type'>Drink Type</label>
-      <select id="drink-dd" name="drink-type">
+      <select [(ngModel)]="drinktype" id="drink-dd" name="drink-type">
         <option value="coffee">Coffee</option>
         <option value="tea">Tea</option>
         <option value="wine">Wine</option>
@@ -27,7 +26,6 @@
       <input [(ngModel)]='price' type="number" id="price" name="drink-price">
       <button type='button' (click)='submitEntryForm()'>post</button>
     </form>
-
 
   </div>
   <div class='progress-box'>

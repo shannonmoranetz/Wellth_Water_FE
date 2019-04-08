@@ -8,8 +8,10 @@ import { EntryService } from '../entry.service';
 })
 export class UserpaneComponent implements OnInit {
   public userName: any;
+  public userId: number;
   public show = false;
   public price: number;
+  public drinktype: string;
 
   constructor(private _entryService: EntryService) { }
 
@@ -17,6 +19,7 @@ export class UserpaneComponent implements OnInit {
     this._entryService.getUserEntries().subscribe(
       (response)=>{
         this.userName = response.name;
+        this.userId = response.id;
     });
   }
 
@@ -25,7 +28,7 @@ export class UserpaneComponent implements OnInit {
   }
 
   submitEntryForm(){
-    this._entryService.postEntry(this.price).subscribe(
+    this._entryService.postEntry(this.userId, this.drinktype, this.price).subscribe(
       (data:any)=>{
         console.log(data)
       }

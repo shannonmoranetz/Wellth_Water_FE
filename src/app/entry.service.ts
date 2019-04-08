@@ -17,8 +17,8 @@ export class EntryService {
     return this.http.get<IUserEntry>(this._url)
   }
 
-  postEntry(price:number): Observable<IEntry> {
-    let _entryUrl = `https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/entries/8/tea/${price}/`
+  postEntry(userid:number, drinktype:string, price:number): Observable<IEntry> {
+    let _entryUrl = `https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/entries/${userid}/${drinktype}/${price}/`
     return this.http.post<IEntry>(_entryUrl, {})
   }
 
