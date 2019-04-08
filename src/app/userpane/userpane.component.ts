@@ -5,7 +5,7 @@ import { sumTotal } from '../sumtotal';
 @Component({
   selector: 'app-userpane',
   templateUrl: './userpane.component.html',
-  styleUrls: ['./userpane.component.scss']
+  styleUrls: ['./userpane.component.scss'],
 })
 export class UserpaneComponent implements OnInit {
   public userName: any;
@@ -14,6 +14,7 @@ export class UserpaneComponent implements OnInit {
   public price: number;
   public drinktype: string;
   public allEntriesTotal: any;
+  public barWidth: any;
   public USD;
 
   constructor(private _entryService: EntryService) { }
@@ -27,6 +28,7 @@ export class UserpaneComponent implements OnInit {
     this._entryService.getAllEntries().subscribe(
       (response)=>{
         this.allEntriesTotal = sumTotal(response);
+        this.barWidth = Math.floor((this.allEntriesTotal / 3000));
     });
   }
 

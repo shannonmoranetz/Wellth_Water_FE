@@ -88,9 +88,6 @@ h1, h2, h3, p {
 .progress-box {
   border: 1px solid black;
   background-color: #E5F1FF;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   height: 100px;
   margin: 0px 30px;
 }
@@ -101,9 +98,16 @@ h1, h2, h3, p {
 .progress-bar {
   border: 1px solid black;
   height: 40px;
-  width: 200px;
   background-color: #F4F9FF;
+  margin: 0 40px !important;
 }
+
+.inner-bar {
+    height: 5px;
+    background-color: #333;
+    height: 40px;
+}
+
 
 .log-button, .progress-bar {
   margin: 0 auto;
