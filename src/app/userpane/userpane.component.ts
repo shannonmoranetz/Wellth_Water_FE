@@ -24,18 +24,12 @@ export class UserpaneComponent implements OnInit {
     this.show = !this.show;
   }
 
-  onNameKeyUp(event:any){
-    this.price = event.target.value;
-  }
-
   submitEntryForm(){
-    console.log('fire')
-    this._entryService.postEntry().subscribe(
+    this._entryService.postEntry(this.price).subscribe(
       (data:any)=>{
         console.log(data)
-    });
+      }
+    );
   }
-
-
 
 }

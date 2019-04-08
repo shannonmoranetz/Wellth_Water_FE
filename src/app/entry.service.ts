@@ -10,7 +10,6 @@ import { Observable } from 'rxjs/Observable';
 export class EntryService {
 
   private _url: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/users/8/entries'
-  private _entryUrl: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/entries/8/soda/150/'
 
   constructor(private http: HttpClient) { }
 
@@ -18,8 +17,9 @@ export class EntryService {
     return this.http.get<IUserEntry>(this._url)
   }
 
-  postEntry(): Observable<IEntry> {
-    return this.http.post<IEntry>(this._entryUrl, {})
+  postEntry(price:number): Observable<IEntry> {
+    let _entryUrl = `https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/entries/8/tea/${price}/`
+    return this.http.post<IEntry>(_entryUrl, {})
   }
 
 }

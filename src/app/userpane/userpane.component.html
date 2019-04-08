@@ -24,7 +24,7 @@
         <option value="beer">Beer</option>
       </select>
       <label for='drink-price'>Price</label>
-      <input (keyup)='onNameKeyUp($event)' type="number" id="price" name="drink-price">
+      <input [(ngModel)]='price' type="number" id="price" name="drink-price">
       <button type='button' (click)='submitEntryForm()'>post</button>
     </form>
 
