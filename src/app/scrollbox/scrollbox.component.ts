@@ -7,14 +7,14 @@ import { EntryService } from '../entry.service';
   styleUrls: ['./scrollbox.component.scss']
 })
 export class ScrollboxComponent implements OnInit {
-  public userEntries: [];
+  public userEntries: any;
 
   constructor(private _entryService: EntryService) { }
 
   ngOnInit() {
     this._entryService.getUserEntries().subscribe(
       (response)=>{
-        this.userEntries = response.entries;
+        this.userEntries = response.entries.reverse();
     });
   }
 
