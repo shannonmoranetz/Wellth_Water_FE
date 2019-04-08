@@ -17,5 +17,4 @@ export class ScrollboxComponent implements OnInit {
         this.userEntries = response.entries.reverse();
     });
   }
-
 }

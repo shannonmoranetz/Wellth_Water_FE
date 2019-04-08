@@ -34,7 +34,7 @@ export class UserpaneComponent implements OnInit {
         if (this.barWidth > 100) {
           this.barWidth = 100;
         }
-        if(this.allEntriesTotal > 3000) {
+        if(this.barWidth > 100) {
           this.showDonate = true;
           this.showDonatePrompt = true;
         }
@@ -57,4 +57,5 @@ export class UserpaneComponent implements OnInit {
     this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe();
     this.toggleShowForm();
   }
+
 }
