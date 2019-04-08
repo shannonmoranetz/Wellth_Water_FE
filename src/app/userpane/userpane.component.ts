@@ -31,6 +31,9 @@ export class UserpaneComponent implements OnInit {
       (response)=>{
         this.allEntriesTotal = sumTotal(response);
         this.barWidth = Math.floor((this.allEntriesTotal / 3000));
+        if (this.barWidth > 100) {
+          this.barWidth = 100;
+        }
         if(this.allEntriesTotal > 3000) {
           this.showDonate = true;
           this.showDonatePrompt = true;
