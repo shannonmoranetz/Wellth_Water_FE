@@ -7,7 +7,7 @@ h1, h2, h3, p {
 .userpane {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   border-top: 2px solid black;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
@@ -25,7 +25,6 @@ h1, h2, h3, p {
   flex-direction: column;
   justify-content: space-around;
   height: 120px;
-  margin: 0px 30px;
 }
 
 .app-title {
@@ -76,7 +75,7 @@ h1, h2, h3, p {
   background-color: white;
   border: 1px solid black;
   height: 300px;
-  width: 300px;
+  width: 40%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -84,7 +83,7 @@ h1, h2, h3, p {
   justify-content: space-around;
   z-index: 100;
   position: absolute;
-  right: 59%;
+  top: 28%;
 }
 
 .donate-button {
@@ -118,7 +117,6 @@ h1, h2, h3, p {
   border: 1px solid black;
   background-color: #E5F1FF;
   height: 100px;
-  margin: 0px 30px;
 }
 
 .progress-text {
