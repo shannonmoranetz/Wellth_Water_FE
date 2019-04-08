@@ -28,7 +28,8 @@ export class UserpaneComponent implements OnInit {
   }
 
   submitEntryForm(){
-    this._entryService.postEntry(this.userId, this.drinktype, this.price).subscribe();
+    this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe();
+    this.toggleShowForm();
   }
 
 }

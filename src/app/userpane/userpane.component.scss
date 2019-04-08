@@ -59,6 +59,30 @@ h1, h2, h3, p {
   height: 200px;
   width: 400px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-hflex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.entry-form-label {
+  margin-bottom: 10px;
+}
+
+.entry-form-button {
+  margin: 0px 20px;
 }
 
 .progress-box {
