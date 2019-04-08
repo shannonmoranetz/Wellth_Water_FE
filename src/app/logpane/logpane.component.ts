@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EntryService } from '../entry.service';
+import { sumTotal } from '../sumtotal';
 
 @Component({
   selector: 'app-logpane',
@@ -6,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./logpane.component.scss']
 })
 export class LogpaneComponent implements OnInit {
-  constructor() { }
+  public userEntries: [];
+  public userTotal = 0;
+  public USD;
+
+  constructor(private _entryService: EntryService) { }
 
   ngOnInit() {
+    this._entryService.getUserEntries().subscribe(
+      (response)=>{
+        this.userEntries = response.entries;
+        this.userTotal = sumTotal(response.entries);
+    });
   }
 
 }

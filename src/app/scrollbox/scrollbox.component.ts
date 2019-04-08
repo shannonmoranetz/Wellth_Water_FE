@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EntryService } from '../entry.service';
-import { sumTotal } from '../sumtotal';
 
 @Component({
   selector: 'app-scrollbox',
@@ -8,17 +7,14 @@ import { sumTotal } from '../sumtotal';
   styleUrls: ['./scrollbox.component.scss']
 })
 export class ScrollboxComponent implements OnInit {
-  public userEntries: [];
-  public userTotal = 0;
-  public USD;
+  public userEntries: any;
 
   constructor(private _entryService: EntryService) { }
 
   ngOnInit() {
     this._entryService.getUserEntries().subscribe(
       (response)=>{
-        this.userEntries = response.entries;
-        this.userTotal = sumTotal(response.entries);
+        this.userEntries = response.entries.reverse();
     });
   }
 
