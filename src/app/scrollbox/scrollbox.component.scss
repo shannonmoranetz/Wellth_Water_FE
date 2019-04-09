@@ -31,9 +31,8 @@ li {
 .entries-scrollbox {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   overflow-y: scroll;
-  height: 395px;
+  max-height: 395px;
   color: white;
 }
 

@@ -35,7 +35,7 @@ export class UserpaneComponent implements OnInit {
       (response)=>{
         this.userName = response.name;
         this.userId = response.id;
-    })
+      })
     this._entryService.getAllEntries().subscribe(
       (response)=>{
         this.allEntriesTotal = sumTotal(response);
@@ -61,13 +61,13 @@ export class UserpaneComponent implements OnInit {
     this.showDonateForm = !this.showDonateForm;
   }
 
-  submitEntryForm(){
+  submitEntryForm() {
     this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe();
     this.showLogForm = !this.showLogForm;
     this.showButtons = true;
   }
 
-  goBack(){
+  goBack() {
     this.showLogForm = false;
     this.showDonateForm = false;
     this.showButtons = true;
