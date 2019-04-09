@@ -1,19 +1,21 @@
 <div class='userpane'>
-  <h2 class='user-greeting'>Hello, {{userName}}</h2>
-  <div class='log-button' (click)='toggleShowForm()' *ngIf='!show'>
+  <h2 class='user-greeting'>Hello, {{userName}}.</h2>
+  <div class='log-button' (click)='toggleLogForm()' *ngIf='!showLogForm && showButtons'>
     <p class='log-button-text'>
       Log Drink <fa-icon [icon]="faTint"></fa-icon>
     </p>
   </div>
-    <div class='donate-button' (click)='toggleDonateForm()' *ngIf='!showDonate'>
-      <p class='donate-button-text'>Donate!</p>
+    <div class='donate-button' (click)='toggleDonateForm()' *ngIf='!showDonateForm && showButtons'>
+      <p class='donate-button-text'>
+        Donate <fa-icon [icon]="faDollarSign"></fa-icon>
+      </p>
     </div>
-    <div class='donate-form-section' *ngIf='showDonate'>
+    <div class='donate-form-section' *ngIf='showDonateForm'>
       <p class='donate-form-text'>Coming Soon...</p>
       <p class='donate-form-text'>Donation transactions with Stripe™</p>
-      <button class='entry-form-button' type='button' (click)='toggleDonateForm()'>Back</button>
+      <button class='entry-form-button' type='button' (click)='goBack()'>Back</button>
     </div>
-    <div class='entry-form-section' *ngIf='show'>
+    <div class='entry-form-section' *ngIf='showLogForm'>
       <p class='entry-form-title'>Add a new drink entry:</p>
       <form class='entry-form'>
         <label class='entry-form-label' for='drink-type'>Drink Type</label>
@@ -21,7 +23,7 @@
           <option value="coffee">Coffee</option>
           <option value="tea">Tea</option>
           <option value="wine">Wine</option>
-          <option value="mixed drinks">Mixed Drinks</option>
+          <option value="cocktail">Cocktail</option>
           <option value="beer">Beer</option>
         </select>
         <br />
@@ -30,7 +32,7 @@
         <br />
         <div class='button-hflex'>
           <button class='entry-form-button' type='button' (click)='submitEntryForm()'>Log</button>
-          <button class='entry-form-button' type='button' (click)='toggleShowForm()'>Back</button>
+          <button class='entry-form-button' type='button' (click)='goBack()'>Back</button>
         </div>
       </form>
     </div>

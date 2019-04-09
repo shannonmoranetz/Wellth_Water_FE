@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EntryService } from '../entry.service';
 import { sumTotal } from '../sumtotal';
 import { faTint } from '@fortawesome/free-solid-svg-icons';
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-userpane',
@@ -11,14 +12,16 @@ import { faTint } from '@fortawesome/free-solid-svg-icons';
 export class UserpaneComponent implements OnInit {
   public userName: any;
   public userId: number;
-  public show = false;
-  public showDonate = false;
+  public showLogForm = false;
+  public showDonateForm = false;
+  public showButtons = true;
   public showDonatePrompt = false;
   public price: number;
   public drinktype: string;
   public allEntriesTotal: any;
   public barWidth: any;
   public faTint = faTint;
+  public faDollarSign = faDollarSign;
   public USD;
 
   constructor(private _entryService: EntryService) { }
@@ -37,27 +40,32 @@ export class UserpaneComponent implements OnInit {
           this.barWidth = 100;
         }
         if(this.barWidth > 100) {
-          this.showDonate = true;
+          this.showDonateForm = true;
           this.showDonatePrompt = true;
+          this.showButtons = false;
         }
     });
   }
 
-  toggleShowForm() {
-    this.showDonate = false;
-    this.show = !this.show;
+  toggleLogForm() {
+    this.showButtons = false;
+    this.showLogForm = !this.showLogForm;
   }
 
   toggleDonateForm() {
-    if(this.show) {
-      this.show = false;
-    }
-    this.showDonate = !this.showDonate;
+    this.showButtons = false;
+    this.showDonateForm = !this.showDonateForm;
   }
 
   submitEntryForm(){
     this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe();
-    this.toggleShowForm();
+    this.showLogForm = !this.showLogForm;
+    this.showButtons = true;
   }
 
+  goBack(){
+    this.showLogForm = false;
+    this.showDonateForm = false;
+    this.showButtons = true;
+  }
 }

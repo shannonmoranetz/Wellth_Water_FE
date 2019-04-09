@@ -41,6 +41,7 @@ h1, h2, h3, p {
 .log-button:hover {
   background-color: #62B6CB;
   border: 2px solid #62B6CB;
+  cursor: pointer;
 }
 
 .log-button-text {
@@ -85,11 +86,12 @@ h1, h2, h3, p {
 
 #price{
   height: 20px;
-  width: 60px;
+  width: 70px;
   margin-left: 4px;
   border-radius: 6px;
   border: 0px;
   text-align: center;
+  font-size: 16px;
 }
 
 .donate-form-section {
@@ -125,17 +127,22 @@ h1, h2, h3, p {
   background-color: #62B6CB;
   border: 2px solid #62B6CB;
   margin: -60px auto;
+  cursor: pointer;
 }
 
-.donate-button-text {
-  font-size: 24px;
+.donate-button-text,
+.log-button-text {
+  font-size: 30px;
   justify: center;
 }
 
 .donate-form-text {
   color: white;
   font-size: 26px;
+}
 
+.donate-prompt-text {
+  color: white;
 }
 
 .button-hflex {
@@ -162,6 +169,7 @@ h1, h2, h3, p {
   background-color: #62B6CB;
   border: 1px solid #62B6CB;
   color: white;
+  cursor: pointer;
 }
 
 .progress-box {
