@@ -13,22 +13,15 @@ h1, h2, h3, p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 75vh;
+  height: 68vh;
   width: 40vw;
   text-align: center;
 }
 
-.welcome-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 120px;
-}
-
 .user-greeting {
   color: white;
-  font-size: 60px;
-  margin-top: 50px;
+  font-size: 50px;
+  text-align: left;
 }
 
 .log-button {
@@ -42,6 +35,9 @@ h1, h2, h3, p {
   text-align: center;
   color: white;
   border-radius: 6px;
+  margin: 0 auto;
+  margin-top: -40px;
+
 }
 
 .log-button:hover {
@@ -153,6 +149,7 @@ h1, h2, h3, p {
 
 .progress-text {
   color: white;
+  font-size: 17px;
 }
 
 .progress-bar {
@@ -173,8 +170,9 @@ h1, h2, h3, p {
 
 .total-out-text {
   color: white;
+  font-size: 28px;
 }
 
-.log-button, .progress-bar {
+.progress-bar {
   margin: 0 auto;
 }

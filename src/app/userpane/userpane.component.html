@@ -1,12 +1,10 @@
 <div class='userpane'>
-  <div class='welcome-box'>
-    <h2 class='user-greeting'>Hello, {{userName}}</h2>
+  <h2 class='user-greeting'>Hello, {{userName}}</h2>
+  <div class='log-button' (click)='toggleShowForm()' *ngIf='!show'>
+    <p class='log-button-text'>
+      Log Drink <fa-icon [icon]="faTint"></fa-icon>
+    </p>
   </div>
-    <div class='log-button' (click)='toggleShowForm()' *ngIf='!show'>
-      <p class='log-button-text'>
-        Log Drink <fa-icon [icon]="faTint"></fa-icon>
-      </p>
-    </div>
     <div class='donate-button' (click)='toggleDonateForm()' *ngIf='!showDonate'>
       <p class='donate-button-text'>Donate!</p>
     </div>

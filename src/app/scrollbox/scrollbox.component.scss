@@ -7,15 +7,15 @@ p, ul {
 li {
   border-radius: 6px;
   background-color: white;
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   padding-right: 80px;
 }
 
 #icon {
   font-size: 30px;
   color: #62B6CB;
-  padding-left: 80px;
+  padding-left: 35px;
 }
 
 .entries-scrollbox {
@@ -36,6 +36,8 @@ li {
 
 .time-box {
   justify-content: space-around;
+  margin-left: 50px;
+
 }
 
 .time-box p {
@@ -48,7 +50,7 @@ li {
 }
 
 .entry-maintext {
-  font-size: 28px;
+  font-size: 24px;
   padding: 5px;
   text-align: left;
 }
@@ -56,11 +58,6 @@ li {
 .entry-subtext {
   font-style: italic;
   padding: 5px;
-}
-
-.date {
-  padding-left: 80px;
-  padding-right: 80px;
 }
 
 ::-webkit-scrollbar {

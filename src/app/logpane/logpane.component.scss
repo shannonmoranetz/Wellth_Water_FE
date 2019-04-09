@@ -1,4 +1,4 @@
-p {
+p, h2 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,22 +8,22 @@ p {
 .logpane {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 75vh;
-  width: 40vw;
+  justify-content: space-between;
+  height: 68vh;
   text-align: center;
 }
 
-.entries-head {
-  padding: 10px;
-}
-
 .entries-text {
-  font-size: 40px;
+  font-size: 50px;
+  text-align: left;
 }
 
 .overflow-scrollbox {
   overflow-y: hidden;
+}
+
+.total-foot {
+  margin-top: 10px;
 }
 
 .total-text {
