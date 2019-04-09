@@ -70,10 +70,11 @@ h1, h2, h3, p {
   align-items: center;
   justify-content: space-around;
   color: white;
+  font-weight: bold;
 }
 
 .entry-form-title {
-  font-size: 22px;
+  font-size: 26px;
   color: white;
 }
 
@@ -141,6 +142,11 @@ h1, h2, h3, p {
   font-size: 26px;
 }
 
+.donate-form-text-head {
+  font-size: 36px;
+  font-weight: bold;
+}
+
 .donate-prompt-text {
   color: white;
 }
@@ -163,6 +169,7 @@ h1, h2, h3, p {
   margin: 0px 20px;
   color: white;
   background-color: transparent;
+  font-size: 15px;
 }
 
 .entry-form-button:hover {
@@ -201,8 +208,9 @@ h1, h2, h3, p {
 }
 
 .total-out-text {
-  color: white;
   font-size: 28px;
+  color: #62B6CB;
+  text-shadow: 1px 1px 1px white;
 }
 
 .progress-bar {

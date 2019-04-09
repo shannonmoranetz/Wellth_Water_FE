@@ -11,7 +11,7 @@
       </p>
     </div>
     <div class='donate-form-section' *ngIf='showDonateForm'>
-      <p class='donate-form-text'>Coming Soon...</p>
+      <p class='donate-form-text donate-form-text-head'>Coming Soon...</p>
       <p class='donate-form-text'>Donation transactions with Stripe™</p>
       <button class='entry-form-button' type='button' (click)='goBack()'>Back</button>
     </div>
@@ -22,6 +22,7 @@
         <select [(ngModel)]="drinktype" id="drink-dd" name="drink-type">
           <option value="coffee">Coffee</option>
           <option value="tea">Tea</option>
+          <option value="soda">Soda</option>
           <option value="wine">Wine</option>
           <option value="cocktail">Cocktail</option>
           <option value="beer">Beer</option>
@@ -40,7 +41,7 @@
     <div class='prompt-section' *ngIf='showDonatePrompt'>
       <h3 class='donate-prompt-text'>Goal Reached -- Time to donate!</h3>
     </div>
-    <h3 class='progress-text' *ngIf='!showDonatePrompt'>Progress to next well:</h3>
+    <h3 class='progress-text' *ngIf='!showDonatePrompt'>Progress to Next Well:</h3>
     <div class='progress-bar'>
       <div class='inner-bar' [style.width.%]='barWidth'></div>
     </div>
