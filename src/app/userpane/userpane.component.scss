@@ -1,81 +1,9 @@
+// Specific Selectors
+
 h1, h2, h3, p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.ng-fa-icon {
-  font-size: 30px;
-  padding: 0px 10px;
-}
-
-.userpane {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 68vh;
-  width: 40vw;
-  text-align: center;
-}
-
-.user-greeting {
-  color: white;
-  font-size: 50px;
-}
-
-.log-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  height: 80px;
-  width: 240px;
-  text-align: center;
-  color: white;
-  border-radius: 6px;
-  margin: 0 auto;
-  margin-top: -40px;
-}
-
-.log-button:hover {
-  background-color: #62B6CB;
-  border: 2px solid #62B6CB;
-  cursor: pointer;
-}
-
-.log-button-text {
-  font-size: 30px;
-  justify: center;
-}
-
-.entry-form-section {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 6px;
-  height: 210px;
-  width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-color: rgba(190, 233, 232, .4);
-  border: 2px solid rgba(190, 233, 232, .4);
-}
-
-.entry-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  color: white;
-  font-weight: bold;
-}
-
-.entry-form-title {
-  font-size: 26px;
-  color: white;
 }
 
 #drink-dd {
@@ -95,6 +23,85 @@ h1, h2, h3, p {
   font-size: 16px;
 }
 
+// Icons
+
+.ng-fa-icon {
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
+.small-button-icon {
+  font-size: 14px;
+}
+
+// Component Layout
+
+.userpane {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 68vh;
+  width: 40vw;
+  text-align: center;
+}
+
+.user-greeting {
+  color: white;
+  font-size: 50px;
+}
+
+// Buttons
+
+.main-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  height: 80px;
+  width: 240px;
+  text-align: center;
+  color: white;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.button-text {
+  font-size: 30px;
+  justify: center;
+}
+
+.button-horizontal-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Forms
+
+.entry-form-section {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+  height: 210px;
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(190, 233, 232, .4);
+  border: 2px solid rgba(190, 233, 232, .4);
+}
+
+.entry-form-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  font-weight: bold;
+}
+
 .donate-form-section {
   background-color: white;
   border: 1px solid black;
@@ -110,36 +117,12 @@ h1, h2, h3, p {
   border-radius: 6px;
 }
 
-.donate-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  height: 80px;
-  width: 240px;
-  text-align: center;
-  color: white;
-  border-radius: 6px;
-  margin: -60px auto;
-}
+// Form Text
 
-.donate-button:hover {
-  background-color: #62B6CB;
-  border: 2px solid #62B6CB;
-  margin: -60px auto;
-  cursor: pointer;
-}
-
-.donate-button-text,
-.log-button-text {
-  font-size: 30px;
-  justify: center;
-}
-
+.entry-form-title,
 .donate-form-text {
-  color: white;
   font-size: 26px;
+  color: white;
 }
 
 .donate-form-text-head {
@@ -151,16 +134,11 @@ h1, h2, h3, p {
   color: white;
 }
 
-.button-hflex {
-  display: flex;
-  justify-content: space-between;
-}
-
 .entry-form-label {
   margin-bottom: 10px;
 }
 
-.entry-form-button {
+.inner-form-button {
   border: 1px solid white;
   text-align: center;
   border-radius: 6px;
@@ -172,26 +150,16 @@ h1, h2, h3, p {
   font-size: 15px;
 }
 
-.entry-form-button:hover {
-  background-color: #62B6CB;
-  border: 1px solid #62B6CB;
-  color: white;
-  cursor: pointer;
-}
+// Progress Bar
 
-.progress-box {
+.progress-section {
   height: 130px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.progress-text {
-  color: white;
-  font-size: 22px;
-}
-
-.progress-bar {
+.progress-bar-outer {
   border: 2px solid white;
   border-radius: 16px;
   height: 40px;
@@ -200,19 +168,37 @@ h1, h2, h3, p {
   margin: 0 100px !important;
 }
 
-.inner-bar {
+.progress-bar-inner {
   height: 5px;
   border-radius: 16px;
   background-color: #62B6CB;
   height: 40px;
 }
 
-.total-out-text {
+// Progress Bar Text
+
+.progress-text {
+  color: white;
+  font-size: 22px;
+}
+
+.total-out-of-text {
   font-size: 28px;
   color: #62B6CB;
   text-shadow: 1px 1px 1px white;
 }
 
-.progress-bar {
-  margin: 0 auto;
+// Hover States
+
+.main-button:hover {
+  background-color: #62B6CB;
+  border: 2px solid #62B6CB;
+  cursor: pointer;
+}
+
+.inner-form-button:hover {
+  background-color: #62B6CB;
+  border: 1px solid #62B6CB;
+  color: white;
+  cursor: pointer;
 }

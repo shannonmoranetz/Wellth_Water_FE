@@ -3,6 +3,8 @@ import { EntryService } from '../entry.service';
 import { sumTotal } from '../sumtotal';
 import { faTint } from '@fortawesome/free-solid-svg-icons';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-userpane',
@@ -22,6 +24,8 @@ export class UserpaneComponent implements OnInit {
   public barWidth: any;
   public faTint = faTint;
   public faDollarSign = faDollarSign;
+  public faArrowLeft = faArrowLeft;
+  public faCheck = faCheck;
   public USD;
 
   constructor(private _entryService: EntryService) { }
