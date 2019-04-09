@@ -6,6 +6,15 @@
   height: 95vh;
 }
 
+.app-logo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.app-logo h1 {
+  padding-bottom: 15px;
+}
 .app-horizontal-flex {
   display: flex;
   align-items: center;
@@ -16,5 +25,5 @@
   font-size: 84px;
   color: #62B6CB;
   margin: 0px;
-  text-shadow: 2px 2px 2px white;
+  text-shadow: 3px 3px 2px white;
 }

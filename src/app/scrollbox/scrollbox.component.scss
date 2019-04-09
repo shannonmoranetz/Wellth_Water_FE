@@ -5,7 +5,17 @@ p, ul {
 }
 
 li {
+  border-radius: 6px;
   background-color: white;
+  margin: 20px;
+  padding: 20px;
+  padding-right: 80px;
+}
+
+#icon {
+  font-size: 30px;
+  color: #62B6CB;
+  padding-left: 80px;
 }
 
 .entries-scrollbox {
@@ -17,23 +27,23 @@ li {
   opacity: 0.65;
 }
 
-.entries-list {
-  border: 3px solid black;
-  margin: 10px 40px;
-}
-
 .drink-box,
 .time-box {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .time-box {
   justify-content: space-around;
 }
 
+.time-box p {
+  color: #62B6CB;
+}
+
 .entry {
-  border: 1px solid black;
+  border: 1px solid white;
   list-style: none;
 }
 
@@ -46,6 +56,11 @@ li {
 .entry-subtext {
   font-style: italic;
   padding: 5px;
+}
+
+.date {
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 ::-webkit-scrollbar {
