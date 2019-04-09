@@ -2,5 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 95vh;
+}
+
+.app-horizontal-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-title {
+  font-size: 84px;
+  color: #62B6CB;
+  margin: 0px;
+  text-shadow: 2px 2px 2px white;
 }

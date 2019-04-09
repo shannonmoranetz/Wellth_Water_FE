@@ -4,13 +4,16 @@ p, ul {
   box-sizing: border-box;
 }
 
+li {
+  background-color: white;
+}
+
 .entries-scrollbox {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow-y: scroll;
   height: 395px;
-  background-color: white;
   opacity: 0.65;
 }
 
