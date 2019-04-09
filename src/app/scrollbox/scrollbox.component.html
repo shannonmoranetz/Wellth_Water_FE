@@ -1,15 +1,14 @@
 <section class='entries-scrollbox'>
   <ul class='entries-list'>
-
     <li *ngFor="let entry of userEntries" class='entry'>
       <div class='drink-box'>
-        <p class='entry-maintext'>Ɏ</p>
+        <fa-icon [icon]="faTint" id='icon'></fa-icon>
         <p class='entry-maintext'>{{entry.drinktype | titlecase}}</p>
         <p class='entry-maintext'>{{entry.amount * .01 | currency: USD}}</p>
       </div>
       <div class='time-box'>
-        <p class='entry-subtext'>{{entry.created_at | date: 'fullDate'}}</p>
-        <p class='entry-subtext'>{{entry.created_at | date: 'shortTime'}}</p>
+        <p class='date entry-subtext'>{{entry.created_at | date: 'fullDate'}}</p>
+        <p class='time entry-subtext'>{{entry.created_at | date: 'shortTime'}}</p>
       </div>
     </li>
   </ul>

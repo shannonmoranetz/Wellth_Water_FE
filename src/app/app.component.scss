@@ -2,5 +2,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 95vh;
+}
+
+.app-heading-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 24px;
+
+}
+
+.app-logo {
+  width: 140px;
+  hegiht: 140px;
+}
+
+.app-horizontal-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-title {
+  font-size: 84px;
+  color: #62B6CB;
+  margin: 0px;
+  text-shadow: 3px 3px 2px white;
+  margin-top: -40px;
+  padding-bottom: 5px;
 }

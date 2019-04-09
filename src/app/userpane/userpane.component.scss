@@ -4,35 +4,23 @@ h1, h2, h3, p {
   box-sizing: border-box;
 }
 
+.ng-fa-icon {
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
 .userpane {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-  border-right: 1px solid black;
-  height: 90vh;
+  height: 68vh;
   width: 40vw;
   text-align: center;
-  background-color: #FFF2D6;
-}
-
-.welcome-box {
-  border: 1px solid black;
-  background-color: #E5F1FF;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 120px;
-}
-
-.app-title {
-  font-size: 62px;
 }
 
 .user-greeting {
-  font-style: italic;
+  color: white;
+  font-size: 50px;
 }
 
 .log-button {
@@ -40,28 +28,39 @@ h1, h2, h3, p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  height: 200px;
-  width: 200px;
+  border: 2px solid white;
+  height: 80px;
+  width: 240px;
   text-align: center;
-  background-color: #A8FFE0;
+  color: white;
+  border-radius: 6px;
+  margin: 0 auto;
+  margin-top: -40px;
+}
+
+.log-button:hover {
+  background-color: #62B6CB;
+  border: 2px solid #62B6CB;
 }
 
 .log-button-text {
-  font-size: 40px;
+  font-size: 30px;
   justify: center;
 }
 
 .entry-form-section {
   background-color: white;
   border: 1px solid black;
-  height: 200px;
+  border-radius: 6px;
+  height: 210px;
   width: 400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  background-color: rgba(190, 233, 232, .4);
+  border: 2px solid rgba(190, 233, 232, .4);
 }
 
 .entry-form {
@@ -69,21 +68,43 @@ h1, h2, h3, p {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  color: white;
+}
+
+.entry-form-title {
+  font-size: 22px;
+  color: white;
+}
+
+#drink-dd {
+  border: 0;
+  height: 24px;
+  width: 122px;
+  font-size: 16px;
+}
+
+#price{
+  height: 20px;
+  width: 60px;
+  margin-left: 4px;
+  border-radius: 6px;
+  border: 0px;
+  text-align: center;
 }
 
 .donate-form-section {
   background-color: white;
   border: 1px solid black;
-  height: 300px;
-  width: 40%;
+  height: 160px;
+  width: 435px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  z-index: 100;
-  position: absolute;
-  top: 28%;
+  background-color: rgba(190, 233, 232, .4);
+  border: 2px solid rgba(190, 233, 232, .4);
+  border-radius: 6px;
 }
 
 .donate-button {
@@ -91,12 +112,30 @@ h1, h2, h3, p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  height: 50px;
-  width: 200px;
+  border: 2px solid white;
+  height: 80px;
+  width: 240px;
   text-align: center;
-  background-color: #A8FFE0;
+  color: white;
+  border-radius: 6px;
   margin: -60px auto;
+}
+
+.donate-button:hover {
+  background-color: #62B6CB;
+  border: 2px solid #62B6CB;
+  margin: -60px auto;
+}
+
+.donate-button-text {
+  font-size: 24px;
+  justify: center;
+}
+
+.donate-form-text {
+  color: white;
+  font-size: 26px;
+
 }
 
 .button-hflex {
@@ -108,33 +147,56 @@ h1, h2, h3, p {
   margin-bottom: 10px;
 }
 
-.entry-form-button,
-.donate-form-button {
+.entry-form-button {
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 6px;
+  width: 86px;
+  height: 24px;
   margin: 0px 20px;
+  color: white;
+  background-color: transparent;
+}
+
+.entry-form-button:hover {
+  background-color: #62B6CB;
+  border: 1px solid #62B6CB;
+  color: white;
 }
 
 .progress-box {
-  border: 1px solid black;
-  background-color: #E5F1FF;
-  height: 100px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .progress-text {
+  color: white;
+  font-size: 22px;
 }
 
 .progress-bar {
-  border: 1px solid black;
+  border: 2px solid white;
+  border-radius: 16px;
   height: 40px;
-  background-color: #F4F9FF;
-  margin: 0 40px !important;
+  background-color: rgba(255, 255, 255, .5);
+  border: 2px solid rgba(255, 255, 255, .5);
+  margin: 0 100px !important;
 }
 
 .inner-bar {
-    height: 5px;
-    background-color: #333;
-    height: 40px;
+  height: 5px;
+  border-radius: 16px;
+  background-color: #62B6CB;
+  height: 40px;
 }
 
-.log-button, .progress-bar {
+.total-out-text {
+  color: white;
+  font-size: 28px;
+}
+
+.progress-bar {
   margin: 0 auto;
 }

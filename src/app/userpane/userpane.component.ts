@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EntryService } from '../entry.service';
 import { sumTotal } from '../sumtotal';
+import { faTint } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-userpane',
@@ -17,6 +18,7 @@ export class UserpaneComponent implements OnInit {
   public drinktype: string;
   public allEntriesTotal: any;
   public barWidth: any;
+  public faTint = faTint;
   public USD;
 
   constructor(private _entryService: EntryService) { }
@@ -34,7 +36,7 @@ export class UserpaneComponent implements OnInit {
         if (this.barWidth > 100) {
           this.barWidth = 100;
         }
-        if(this.allEntriesTotal > 3000) {
+        if(this.barWidth > 100) {
           this.showDonate = true;
           this.showDonatePrompt = true;
         }
@@ -57,4 +59,5 @@ export class UserpaneComponent implements OnInit {
     this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe();
     this.toggleShowForm();
   }
+
 }

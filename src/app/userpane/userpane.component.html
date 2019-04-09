@@ -1,21 +1,17 @@
 <div class='userpane'>
-  <div class='welcome-box'>
-    <h1 class='app-title'>Wellth Water</h1>
-    <h2 class='user-greeting'>Hello, {{userName}}</h2>
+  <h2 class='user-greeting'>Hello, {{userName}}</h2>
+  <div class='log-button' (click)='toggleShowForm()' *ngIf='!show'>
+    <p class='log-button-text'>
+      Log Drink <fa-icon [icon]="faTint"></fa-icon>
+    </p>
   </div>
-    <div class='log-button' (click)='toggleShowForm()' *ngIf='!show'>
-      <p class='log-button-text'>
-        Log
-        <br/>
-        Drink
-      </p>
-    </div>
     <div class='donate-button' (click)='toggleDonateForm()' *ngIf='!showDonate'>
       <p class='donate-button-text'>Donate!</p>
     </div>
     <div class='donate-form-section' *ngIf='showDonate'>
-      <p class='donate-form-title'>Make a Donation</p>
-      <button class='donate-form-button' type='button' (click)='toggleDonateForm()'>Back</button>
+      <p class='donate-form-text'>Coming Soon...</p>
+      <p class='donate-form-text'>Donation transactions with Stripe™</p>
+      <button class='entry-form-button' type='button' (click)='toggleDonateForm()'>Back</button>
     </div>
     <div class='entry-form-section' *ngIf='show'>
       <p class='entry-form-title'>Add a new drink entry:</p>
@@ -46,6 +42,6 @@
     <div class='progress-bar'>
       <div class='inner-bar' [style.width.%]='barWidth'></div>
     </div>
-    <span class='total-out-text'><span>{{allEntriesTotal*.01 | currency: USD}}</span> / $3000</span>
+    <span class='total-out-text'><span>{{allEntriesTotal*.01 | currency: USD}}</span> / $3,000</span>
   </div>
 </div>
