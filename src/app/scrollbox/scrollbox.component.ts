@@ -15,7 +15,7 @@ export class ScrollboxComponent implements OnInit {
   ngOnInit() {
     this._entryService.getUserEntries().subscribe(
       (response)=>{
-        this.userEntries = response.entries.reverse();
+        this.userEntries = response.entries;
     });
   }
 }

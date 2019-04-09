@@ -21,7 +21,6 @@ h1, h2, h3, p {
 .user-greeting {
   color: white;
   font-size: 50px;
-  text-align: left;
 }
 
 .log-button {
@@ -37,7 +36,6 @@ h1, h2, h3, p {
   border-radius: 6px;
   margin: 0 auto;
   margin-top: -40px;
-
 }
 
 .log-button:hover {
@@ -141,7 +139,7 @@ h1, h2, h3, p {
 }
 
 .progress-box {
-  height: 100px;
+  height: 130px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -149,11 +147,11 @@ h1, h2, h3, p {
 
 .progress-text {
   color: white;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 .progress-bar {
-  border: 1px solid black;
+  border: 2px solid white;
   border-radius: 16px;
   height: 40px;
   background-color: #F4F9FF;
