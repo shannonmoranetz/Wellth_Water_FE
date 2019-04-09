@@ -5,9 +5,7 @@
   </div>
     <div class='log-button' (click)='toggleShowForm()' *ngIf='!show'>
       <p class='log-button-text'>
-        Log
-        <br/>
-        Drink
+        Log Drink <fa-icon [icon]="faTint"></fa-icon>
       </p>
     </div>
     <div class='donate-button' (click)='toggleDonateForm()' *ngIf='!showDonate'>

@@ -4,6 +4,11 @@ h1, h2, h3, p {
   box-sizing: border-box;
 }
 
+.ng-fa-icon {
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
 .userpane {
   display: flex;
   flex-direction: column;
@@ -40,16 +45,21 @@ h1, h2, h3, p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  height: 200px;
-  width: 200px;
+  border: 2px solid white;
+  height: 80px;
+  width: 240px;
   text-align: center;
-  background-color: white;
-  color: black;
+  color: white;
+  border-radius: 6px;
+}
+
+.log-button:hover {
+  background-color: #62B6CB;
+  border: 2px solid #62B6CB;
 }
 
 .log-button-text {
-  font-size: 40px;
+  font-size: 30px;
   justify: center;
 }
 

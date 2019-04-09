@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EntryService } from '../entry.service';
 import { sumTotal } from '../sumtotal';
+import { faTint } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-userpane',
@@ -17,6 +18,7 @@ export class UserpaneComponent implements OnInit {
   public drinktype: string;
   public allEntriesTotal: any;
   public barWidth: any;
+  public faTint = faTint;
   public USD;
 
   constructor(private _entryService: EntryService) { }

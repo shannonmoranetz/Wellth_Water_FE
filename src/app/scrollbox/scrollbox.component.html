@@ -1,9 +1,8 @@
 <section class='entries-scrollbox'>
   <ul class='entries-list'>
-
     <li *ngFor="let entry of userEntries" class='entry'>
       <div class='drink-box'>
-        <p class='entry-maintext'>Ɏ</p>
+        <fa-icon [icon]="faTint"></fa-icon>
         <p class='entry-maintext'>{{entry.drinktype | titlecase}}</p>
         <p class='entry-maintext'>{{entry.amount * .01 | currency: USD}}</p>
       </div>

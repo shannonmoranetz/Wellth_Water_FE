@@ -6,6 +6,7 @@ import { UserpaneComponent } from './userpane/userpane.component';
 import { LogpaneComponent } from './logpane/logpane.component';
 import { ScrollboxComponent } from './scrollbox/scrollbox.component';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
