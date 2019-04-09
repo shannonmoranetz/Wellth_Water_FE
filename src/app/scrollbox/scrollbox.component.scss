@@ -1,3 +1,5 @@
+// Specific Selectors
+
 p, ul {
   margin: 0;
   padding: 0;
@@ -8,64 +10,60 @@ li {
   border-radius: 6px;
   background-color: rgba(190, 233, 232, .4);
   border: 2px solid rgba(190, 233, 232, .4);
-  margin: 10px;
   padding: 10px;
-  padding-right: 80px;
+  margin: 10px;
+  width: 320px;
+  list-style: none;
 }
 
 #icon {
   font-size: 30px;
   color: #b7dcf7;
-  padding-left: 35px;
-}
-
-.entries-scrollbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow-y: scroll;
-  height: 395px;
-  color: white;
-}
-
-.drink-box,
-.time-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.time-box {
-  justify-content: space-around;
-  margin-left: 50px;
-}
-
-.time-box p {
-  color: white;
-}
-
-.entry {
-  list-style: none;
-}
-
-.entry:hover{
-  border: 2px solid white;
-  background-color: rgba(190, 233, 232, .7);
-
-}
-
-.entry-maintext {
-  font-size: 24px;
-  padding: 5px;
-  text-align: left;
-}
-
-.entry-subtext {
-  font-style: italic;
-  padding: 5px;
 }
 
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
+}
+
+// Component Layout
+
+.entries-scrollbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow-y: scroll;
+  height: 395px;
+  color: white;
+}
+
+.scrollbox-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+// Text
+
+.drink-price-text {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.entry-maintext {
+  font-size: 24px;
+}
+
+.entry-subtext {
+  font-style: italic;
+  margin-top: 10px;
+  text-align: center;
+}
+
+// Hover States
+
+li:hover{
+  border: 2px solid white;
+  background-color: rgba(190, 233, 232, .7);
 }
