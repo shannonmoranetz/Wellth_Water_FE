@@ -15,7 +15,7 @@ Dashboard
 Log a drink form
 
 ![Current Version](https://imgur.com/fQkIZ35.jpg)
-Donation form (Comming soon!)
+Donation form (Coming soon!)
 
 #### Wellth Water Production Links:
 Live App: https://wellthwater.herokuapp.com/
