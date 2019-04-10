@@ -1,3 +1,5 @@
+// Specific Selectors
+
 p, h2 {
   margin: 0;
   padding: 0;
@@ -5,17 +7,14 @@ p, h2 {
   color: white;
 }
 
+// Component Layout
+
 .logpane {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 68vh;
   text-align: center;
-}
-
-.entries-text {
-  font-size: 50px;
-  text-align: left;
 }
 
 .overflow-scrollbox {
@@ -26,10 +25,10 @@ p, h2 {
   margin-top: 10px;
 }
 
-.total-text {
-  font-size: 60px;
-  color: #62B6CB;
-  text-shadow: 2px 2px 2px white;
+// Text
+
+.entries-text {
+  font-size: 50px;
 }
 
 .total-heading {
@@ -37,4 +36,11 @@ p, h2 {
   padding: 0px 0px 5px 0px;
   margin-left: 150px;
   font-size: 24px;
+}
+
+.total-text {
+  font-size: 60px;
+  color: #62B6CB;
+  text-shadow: 2px 2px 2px white;
+  font-family: Cabin Sketch;
 }
