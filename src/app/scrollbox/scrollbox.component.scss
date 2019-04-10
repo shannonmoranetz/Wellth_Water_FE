@@ -8,8 +8,8 @@ p, ul, h2 {
 
 li {
   border-radius: 6px;
-  background-color: rgba(190, 233, 232, .4);
-  border: 2px solid rgba(190, 233, 232, .4);
+  background-color: rgba(145, 230, 255, .4);
+  border: 2px solid rgba(145, 230, 255, .1);
   padding: 10px;
   margin: 10px;
   width: 320px;
@@ -18,7 +18,7 @@ li {
 
 #icon {
   font-size: 30px;
-  color: #b7dcf7;
+  color: white;
 }
 
 ::-webkit-scrollbar {
@@ -48,6 +48,7 @@ li {
 .loading-text {
   font-family: Cabin Sketch;
   font-size: 50px;
+  font-weight: normal;
 }
 
 .drink-price-text {
@@ -68,6 +69,6 @@ li {
 // Hover States
 
 li:hover{
-  border: 2px solid white;
-  background-color: rgba(190, 233, 232, .7);
+  border: 2px solid rgba(145, 230, 255, .4);
+  background-color: rgba(145, 230, 255, .7);
 }
