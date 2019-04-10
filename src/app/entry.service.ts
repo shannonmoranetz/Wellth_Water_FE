@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 export class EntryService {
 
-  private _url: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/users/11/entries'
+  private _url: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/users/16/entries'
   private _allEntryUrl: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/entries'
   private entryUpdateData = new BehaviorSubject<any>([])
   cast = this.entryUpdateData.asObservable();
