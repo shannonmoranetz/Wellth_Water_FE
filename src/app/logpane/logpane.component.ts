@@ -19,7 +19,7 @@ export class LogpaneComponent implements OnInit {
       (response)=>{
         this.userEntries = response.entries;
         this.userTotal = sumTotal(response.entries);
-    });
+    })
   }
 
 }
