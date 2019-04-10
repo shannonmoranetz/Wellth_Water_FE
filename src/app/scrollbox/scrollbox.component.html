@@ -12,7 +12,7 @@
       </div>
     </li>
   </ul>
-  <div class='loading-section' *ngIf='!userEntries?.length > 0'>
+  <div class='loading-section' *ngIf='!(userEntries?.length > 0)'>
     <h2 class='loading-text'>Loading...</h2>
   </div>
 </section>
