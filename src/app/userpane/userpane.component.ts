@@ -12,21 +12,21 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./userpane.component.scss'],
 })
 export class UserpaneComponent implements OnInit {
+  public updatedEntries: any;
+  public allEntriesTotal: any;
+  public barWidth: any;
   public userName: any;
   public userId: number;
+  public price: number;
+  public drinktype: string;
   public showLogForm = false;
   public showDonateForm = false;
   public showButtons = true;
   public showDonatePrompt = false;
-  public price: number;
-  public drinktype: string;
-  public allEntriesTotal: any;
-  public barWidth: any;
   public faTint = faTint;
   public faDollarSign = faDollarSign;
   public faArrowLeft = faArrowLeft;
   public faCheck = faCheck;
-  public updatedEntries: any;
   public USD;
 
   constructor(private _entryService: EntryService) { }
@@ -36,9 +36,7 @@ export class UserpaneComponent implements OnInit {
       (response)=>{
         this.userName = response.name;
         this.userId = response.id;
-
         this.updatedEntries = response.entries;
-
       })
     this._entryService.getAllEntries().subscribe(
       (response)=>{
@@ -53,10 +51,7 @@ export class UserpaneComponent implements OnInit {
           this.showButtons = false;
         }
     });
-
-    this._entryService.cast.subscribe(entryUpdateData => this.updatedEntries = entryUpdateData)
-
-
+    this._entryService.cast.subscribe(entryUpdateData => this.updatedEntries = entryUpdateData);
   }
 
   toggleLogForm() {
