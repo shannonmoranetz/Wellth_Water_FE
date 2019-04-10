@@ -11,10 +11,10 @@ Wellth Water is a Mod4 cross-pollination project at [Turing School of Software &
 ![Current Version](https://imgur.com/vIrHp7c.jpg)
 Dashboard
 
-![Current Version](https://imgur.com/EBZe9zE.jpg)
+![Current Version](https://imgur.com/l7pdwDv.jpg)
 Log a drink form
 
-![Current Version](https://imgur.com/LfMpMnc.jpg)
+![Current Version](https://imgur.com/a/EcaLtjd.jpg)
 Donation form (Comming soon!)
 
 #### Wellth Water Production Links:
