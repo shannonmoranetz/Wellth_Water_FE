@@ -17,5 +17,6 @@ export class ScrollboxComponent implements OnInit {
       (response)=>{
         this.userEntries = response.entries;
     });
+    this._entryService.cast.subscribe(entryUpdateData => this.userEntries = entryUpdateData)
   }
 }

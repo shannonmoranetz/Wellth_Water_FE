@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { IUserEntry } from './userEntry';
 import { IEntry } from './entry';
 import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ export class EntryService {
 
   private _url: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/users/15/entries'
   private _allEntryUrl: string = 'https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/entries'
+  private entryUpdateData = new BehaviorSubject<any>([])
+  cast = this.entryUpdateData.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -25,6 +28,10 @@ export class EntryService {
   postEntry(userid:number, drinktype:string, price:number): Observable<IEntry> {
     let _entryUrl = `https://cors-anywhere.herokuapp.com/http://wellth-water.herokuapp.com/api/v1/entries/${userid}/${drinktype}/${price}/`
     return this.http.post<IEntry>(_entryUrl, {})
+  }
+
+  updateData(newEntryData){
+    this.entryUpdateData.next(newEntryData)
   }
 
 }

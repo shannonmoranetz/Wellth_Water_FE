@@ -28,6 +28,8 @@ export class UserpaneComponent implements OnInit {
   public faCheck = faCheck;
   public USD;
 
+  public updatedEntries: any;
+
   constructor(private _entryService: EntryService) { }
 
   ngOnInit() {
@@ -35,6 +37,9 @@ export class UserpaneComponent implements OnInit {
       (response)=>{
         this.userName = response.name;
         this.userId = response.id;
+
+        this.updatedEntries = response.entries;
+
       })
     this._entryService.getAllEntries().subscribe(
       (response)=>{
@@ -49,6 +54,10 @@ export class UserpaneComponent implements OnInit {
           this.showButtons = false;
         }
     });
+
+    this._entryService.cast.subscribe(entryUpdateData => this.updatedEntries = entryUpdateData)
+
+
   }
 
   toggleLogForm() {
@@ -62,7 +71,16 @@ export class UserpaneComponent implements OnInit {
   }
 
   submitEntryForm() {
-    this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe();
+    this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe(
+      (response)=>{
+        let newEntry = {
+          user_id: this.userId,
+          drinktype: this.drinktype,
+          amount: this.price*100
+        }
+        this.updatedEntries = [newEntry, ...this.updatedEntries]
+        this._entryService.updateData(this.updatedEntries)
+      });
     this.showLogForm = !this.showLogForm;
     this.showButtons = true;
   }
