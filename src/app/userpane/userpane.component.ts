@@ -26,9 +26,8 @@ export class UserpaneComponent implements OnInit {
   public faDollarSign = faDollarSign;
   public faArrowLeft = faArrowLeft;
   public faCheck = faCheck;
-  public USD;
-
   public updatedEntries: any;
+  public USD;
 
   constructor(private _entryService: EntryService) { }
 
@@ -76,7 +75,8 @@ export class UserpaneComponent implements OnInit {
         let newEntry = {
           user_id: this.userId,
           drinktype: this.drinktype,
-          amount: this.price*100
+          amount: this.price*100,
+          created_at: Date.now()
         }
         this.updatedEntries = [newEntry, ...this.updatedEntries]
         this._entryService.updateData(this.updatedEntries)
