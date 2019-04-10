@@ -1,4 +1,4 @@
 export function sumTotal(entries) {
-  let sum = entries.reduce((acc, cur) => acc + cur.amount, 0);
+  let sum = entries.reduce((acc, entry) => acc + entry.amount, 0);
   return sum;
 }

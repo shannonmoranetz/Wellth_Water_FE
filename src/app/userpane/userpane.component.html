@@ -1,47 +1,56 @@
 <div class='userpane'>
-  <h2 class='user-greeting'>Hello, {{userName}}</h2>
-  <div class='log-button' (click)='toggleShowForm()' *ngIf='!show'>
-    <p class='log-button-text'>
+  <h2 class='user-greeting'>Hello, {{userName}}.</h2>
+  <div class='main-button' (click)='toggleLogForm()' *ngIf='!showLogForm && showButtons'>
+    <p class='button-text'>
       Log Drink <fa-icon [icon]="faTint"></fa-icon>
     </p>
   </div>
-    <div class='donate-button' (click)='toggleDonateForm()' *ngIf='!showDonate'>
-      <p class='donate-button-text'>Donate!</p>
+    <div class='main-button' (click)='toggleDonateForm()' *ngIf='!showDonateForm && showButtons'>
+      <p class='button-text'>
+        Donate <fa-icon [icon]="faDollarSign"></fa-icon>
+      </p>
     </div>
-    <div class='donate-form-section' *ngIf='showDonate'>
-      <p class='donate-form-text'>Coming Soon...</p>
+    <div class='donate-form-section' *ngIf='showDonateForm'>
+      <p class='donate-form-text donate-form-text-head'>Coming Soon...</p>
       <p class='donate-form-text'>Donation transactions with Stripe™</p>
-      <button class='entry-form-button' type='button' (click)='toggleDonateForm()'>Back</button>
+      <button class='inner-form-button' type='button' (click)='goBack()'>
+        <fa-icon class='small-button-icon' [icon]="faArrowLeft"></fa-icon>
+      </button>
     </div>
-    <div class='entry-form-section' *ngIf='show'>
+    <div class='entry-form-section' *ngIf='showLogForm'>
       <p class='entry-form-title'>Add a new drink entry:</p>
-      <form class='entry-form'>
+      <form class='entry-form-inner'>
         <label class='entry-form-label' for='drink-type'>Drink Type</label>
         <select [(ngModel)]="drinktype" id="drink-dd" name="drink-type">
           <option value="coffee">Coffee</option>
           <option value="tea">Tea</option>
+          <option value="soda">Soda</option>
           <option value="wine">Wine</option>
-          <option value="mixed drinks">Mixed Drinks</option>
+          <option value="cocktail">Cocktail</option>
           <option value="beer">Beer</option>
         </select>
         <br />
         <label class='entry-form-label' for='drink-price'>Price</label>
         <span class='dollar-sign'>$<input [(ngModel)]='price' type="number" id="price" name="drink-price"></span>
         <br />
-        <div class='button-hflex'>
-          <button class='entry-form-button' type='button' (click)='submitEntryForm()'>Log</button>
-          <button class='entry-form-button' type='button' (click)='toggleShowForm()'>Back</button>
+        <div class='button-horizontal-flex'>
+          <button class='inner-form-button' type='button' (click)='goBack()'>
+            <fa-icon class='small-button-icon' [icon]="faArrowLeft"></fa-icon>
+          </button>
+          <button class='inner-form-button' type='button' (click)='submitEntryForm()'>
+            Log <fa-icon class='small-button-icon' [icon]="faCheck"></fa-icon>
+          </button>
         </div>
       </form>
     </div>
-  <div class='progress-box'>
+  <div class='progress-section'>
     <div class='prompt-section' *ngIf='showDonatePrompt'>
       <h3 class='donate-prompt-text'>Goal Reached -- Time to donate!</h3>
     </div>
-    <h3 class='progress-text' *ngIf='!showDonatePrompt'>Progress to next well:</h3>
-    <div class='progress-bar'>
-      <div class='inner-bar' [style.width.%]='barWidth'></div>
+    <h3 class='progress-text' *ngIf='!showDonatePrompt'>Progress to Next Well:</h3>
+    <div class='progress-bar-outer'>
+      <div class='progress-bar-inner' [style.width.%]='barWidth'></div>
     </div>
-    <span class='total-out-text'><span>{{allEntriesTotal*.01 | currency: USD}}</span> / $3,000</span>
+    <span class='total-out-of-text'><span>{{allEntriesTotal*.01 | currency: USD}}</span> / $3,000</span>
   </div>
 </div>

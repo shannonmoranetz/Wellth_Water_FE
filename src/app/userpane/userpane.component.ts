@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { EntryService } from '../entry.service';
 import { sumTotal } from '../sumtotal';
 import { faTint } from '@fortawesome/free-solid-svg-icons';
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-userpane',
@@ -9,16 +12,21 @@ import { faTint } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./userpane.component.scss'],
 })
 export class UserpaneComponent implements OnInit {
-  public userName: any;
-  public userId: number;
-  public show = false;
-  public showDonate = false;
-  public showDonatePrompt = false;
-  public price: number;
-  public drinktype: string;
+  public updatedEntries: any;
   public allEntriesTotal: any;
   public barWidth: any;
+  public userName: any;
+  public userId: number;
+  public price: number;
+  public drinktype: string;
+  public showLogForm = false;
+  public showDonateForm = false;
+  public showButtons = true;
+  public showDonatePrompt = false;
   public faTint = faTint;
+  public faDollarSign = faDollarSign;
+  public faArrowLeft = faArrowLeft;
+  public faCheck = faCheck;
   public USD;
 
   constructor(private _entryService: EntryService) { }
@@ -28,7 +36,8 @@ export class UserpaneComponent implements OnInit {
       (response)=>{
         this.userName = response.name;
         this.userId = response.id;
-    })
+        this.updatedEntries = response.entries;
+      })
     this._entryService.getAllEntries().subscribe(
       (response)=>{
         this.allEntriesTotal = sumTotal(response);
@@ -37,27 +46,46 @@ export class UserpaneComponent implements OnInit {
           this.barWidth = 100;
         }
         if(this.barWidth > 100) {
-          this.showDonate = true;
+          this.showDonateForm = true;
           this.showDonatePrompt = true;
+          this.showButtons = false;
         }
     });
+    this._entryService.cast.subscribe(entryUpdateData => this.updatedEntries = entryUpdateData);
   }
 
-  toggleShowForm() {
-    this.showDonate = false;
-    this.show = !this.show;
+  toggleLogForm() {
+    this.showButtons = false;
+    this.showLogForm = !this.showLogForm;
   }
 
   toggleDonateForm() {
-    if(this.show) {
-      this.show = false;
-    }
-    this.showDonate = !this.showDonate;
+    this.showButtons = false;
+    this.showDonateForm = !this.showDonateForm;
   }
 
-  submitEntryForm(){
-    this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe();
-    this.toggleShowForm();
+  submitEntryForm() {
+    this._entryService.postEntry(this.userId, this.drinktype, this.price*100).subscribe(
+      (response)=>{
+        let newEntry = {
+          user_id: this.userId,
+          drinktype: this.drinktype,
+          amount: this.price*100,
+          created_at: Date.now()
+        }
+        this.updatedEntries = [newEntry, ...this.updatedEntries]
+        this._entryService.updateData(this.updatedEntries)
+        this.drinktype = '';
+        this.price = null;
+      });
+    this.showLogForm = !this.showLogForm;
+    this.showButtons = true;
+
   }
 
+  goBack() {
+    this.showLogForm = false;
+    this.showDonateForm = false;
+    this.showButtons = true;
+  }
 }
