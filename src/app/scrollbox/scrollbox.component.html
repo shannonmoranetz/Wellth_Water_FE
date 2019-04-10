@@ -1,5 +1,5 @@
 <section class='entries-scrollbox'>
-  <ul class='entries-list'>
+  <ul class='entries-list' *ngIf='userEntries?.length > 0'>
     <li *ngFor="let entry of userEntries" class='entry'>
       <div class='scrollbox-section'>
           <fa-icon [icon]="faTint" id='icon'></fa-icon>
@@ -12,4 +12,7 @@
       </div>
     </li>
   </ul>
+  <div class='loading-section' *ngIf='!userEntries?.length > 0'>
+    <h2 class='loading-text'>Loading...</h2>
+  </div>
 </section>
