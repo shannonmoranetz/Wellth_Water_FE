@@ -75,9 +75,12 @@ export class UserpaneComponent implements OnInit {
         }
         this.updatedEntries = [newEntry, ...this.updatedEntries]
         this._entryService.updateData(this.updatedEntries)
+        this.drinktype = '';
+        this.price = null;
       });
     this.showLogForm = !this.showLogForm;
     this.showButtons = true;
+
   }
 
   goBack() {
