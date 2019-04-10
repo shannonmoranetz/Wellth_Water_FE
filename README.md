@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/shannonmoranetz/Wellth_Water_FE.svg?branch=master)](https://travis-ci.org/shannonmoranetz/Wellth_Water_FE)
+
 # Wellth Water
 
 ![Banner](https://imgur.com/4vmhWys.jpg)
