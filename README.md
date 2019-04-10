@@ -14,7 +14,7 @@ Dashboard
 ![Current Version](https://imgur.com/l7pdwDv.jpg)
 Log a drink form
 
-![Current Version](https://imgur.com/a/EcaLtjd.jpg)
+![Current Version](https://imgur.com/fQkIZ35.jpg)
 Donation form (Comming soon!)
 
 #### Wellth Water Production Links:
