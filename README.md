@@ -1,22 +1,12 @@
 # Wellth Water
 
-<<<<<<< HEAD
-![Image description](https://imgur.com/BgpcFP4.jpg)
+![Banner](https://imgur.com/BgpcFP4.jpg)
 
 Wellth Water is an app for logging and tracking drink amounts & types that you choose to give up over a months time in order to instead donate the money you would have spent to fund a clean water well for people around the world who do not access to clean water.
 
 **"We as Wellth Water believe in the power of giving up a small amount of your own personal wealth, in order to build a well to give people access to clean water."**
 
 Wellth Water is a Mod4 cross-pollination project at [Turing School of Software & Design](https://turing.io/) where three students *(2 students from the backend program, and 1 student from the frontend program)* with 6 months experience in software development create an Angular/Typescript framework on the frontend. Future iterations will include using the Stripe API in order to process payments.
-=======
-![Banner](https://imgur.com/BgpcFP4.jpg)
-
-Wellth Water is an app for logging and tracking drink amounts & types that you choose to give up over a months time in order to instead donate the money you would have spent to fund a clean water well for people around the world who do not access to clean water.  Wellth Water then uses the Stripe API in order to process a payment for your total amount you saved over the month.
-
-**"We at Wellth Water believe in the power of giving up a small amount of your own personal wealth, in order to build a well to give people access to clean water."**
-
-Wellth Water is a Mod4 cross-pollination project at [Turing School of Software & Design](https://turing.io/) where three students *(2 students from the backend program, and 1 student from the frontend program)* with 6 months experience in software development create an Angular/Typescript framework on the frontend, while consuming a Django API on the backend. Future iterations will include using the Stripe API in order to process payments.
->>>>>>> 77c1e570c70954d3f781cdc6901354df661e5416
 
 ![Current Version](https://i.imgur.com/eOSai4B.png)
 
@@ -36,28 +26,20 @@ https://github.com/justinmauldin7/Wellth_Water_BE
 
 #### Wellth Water Project Board Link:
 https://github.com/justinmauldin7/Wellth_Water_BE/projects/1
-<<<<<<< HEAD
-## Getting Started
-
-=======
 
 ## Getting Started
 
->>>>>>> 77c1e570c70954d3f781cdc6901354df661e5416
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 #### Prerequisites:
 
-<<<<<<< HEAD
 * Install the latest version of the Javascript runtime Node: [Download](https://nodejs.org/en/download/)
-=======
->>>>>>> 77c1e570c70954d3f781cdc6901354df661e5416
 * Install Angular, including the CLI (Version 7.3.8) [Quickstart Guide](https://angular.io/guide/quickstart)
 * Heroku Account - (Create a free account [here](https://signup.heroku.com/) if you don't have one already.)
 
 ### Installing:
 
-To run this application locally, clone this [repo](https://github.com/justinmauldin7/Wellth_Water_BE) and follow the steps below:
+To run this application locally, clone this [repo](https://github.com/shannonmoranetz/Wellth_Water_FE) and follow the steps below:
 
 1) Navigate to the cloned directory at your download destination:
 ```
@@ -71,11 +53,7 @@ $ npm install
 
 3) Start your local server:
 ```
-<<<<<<< HEAD
 $ ng serve --open
-=======
-$ ng serve
->>>>>>> 77c1e570c70954d3f781cdc6901354df661e5416
 ```
 
 4) The browser will automatically open and show the page at:
