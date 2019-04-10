@@ -89,8 +89,8 @@ h1, h2, h3, p {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: rgba(190, 233, 232, .4);
-  border: 2px solid rgba(190, 233, 232, .4);
+  background-color: rgba(145, 230, 255, .4);
+  border: 2px solid rgba(145, 230, 255, .4);
 }
 
 .entry-form-inner {
@@ -112,8 +112,8 @@ h1, h2, h3, p {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: rgba(190, 233, 232, .4);
-  border: 2px solid rgba(190, 233, 232, .4);
+  background-color: rgba(145, 230, 255, .4);
+  border: 2px solid rgba(145, 230, 255, .4);
   border-radius: 6px;
 }
 
@@ -185,7 +185,8 @@ h1, h2, h3, p {
 .total-out-of-text {
   font-size: 28px;
   color: #62B6CB;
-  text-shadow: 1px 1px 1px white;
+  font-family: Cabin Sketch;
+  // text-shadow: 1px 1px 1px white;
 }
 
 // Hover States
